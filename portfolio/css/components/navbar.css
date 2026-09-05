@@ -213,7 +213,13 @@ body {
     position: fixed;
     inset: 0;
     top: 76px;
-    background: var(--color-bg);
+    width: 100vw;
+    height: calc(100vh - 76px);
+    max-height: calc(100vh - 76px);
+    overflow-y: auto;
+    background-color: #FFFFFF;
+    background-image: none;
+    box-shadow: var(--shadow-lg);
     flex-direction: column;
     justify-content: flex-start;
     gap: var(--space-3);
@@ -229,8 +235,22 @@ body {
   }
 
   .navbar__link {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
     font-size: var(--text-h3);
     font-family: var(--font-display);
+  }
+
+  [data-theme="dark"] .navbar__links {
+    background-color: #141B2A;
+  }
+
+  [data-theme="dark"] .navbar__link {
+    background: transparent;
+    color: #FFFFFF;
   }
 }
 
