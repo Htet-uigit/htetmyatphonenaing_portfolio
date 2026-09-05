@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: 0.95rem 1.75rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: var(--tracking-normal);
+  white-space: nowrap;
+  transition: background-color var(--transition-base), color var(--transition-base),
+              border-color var(--transition-base), transform var(--transition-fast);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--primary {
+  background: var(--color-ink);
+  color: var(--color-bg);
+  border: 1px solid var(--color-ink);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+}
+
+.btn--secondary:hover {
+  border-color: var(--color-ink);
+  background: var(--color-mist);
+}
+
+.btn--sm {
+  padding: 0.55rem 1.15rem;
+  font-size: var(--text-micro);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* Filter pill buttons (Projects section) */
+.filter-btn {
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-slate);
+  font-size: var(--text-small);
+  font-weight: 500;
+  transition: background-color var(--transition-fast), color var(--transition-fast),
+              border-color var(--transition-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+
+.filter-btn.is-active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Muted rectangle button to match Live demo feel */
+.btn--muted {
+  background: var(--color-mist);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+}
+
+.btn--muted:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+}

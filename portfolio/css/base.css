@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 400;
+  overflow-x: hidden;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+body, .navbar, .hero__scrim, .section, .section__heading, .btn, .chip, .project-card, .filter-btn, .about__content, .footer, .hero__actions {
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+[data-theme="dark"] body {
+  background: var(--color-bg);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--color-ink);
+}
+
+h2 {
+  font-size: var(--text-h2);
+}
+
+h3 {
+  font-size: var(--text-h3);
+  font-weight: 600;
+}
+
+p {
+  color: var(--color-slate);
+  line-height: var(--leading-normal);
+}
+
+strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+a {
+  transition: color var(--transition-fast);
+}
+
+/* The "data" face: small labels, numbers, tags, dates — anything that reads
+   as measured/structured gets the monospace treatment throughout the site. */
+.eyebrow,
+.stat__number,
+.chip,
+.timeline__date,
+.navbar__logo,
+.field label {
+  font-family: var(--font-mono);
+}
+
+.eyebrow {
+  font-size: var(--text-micro);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* Focus visibility — kept consistent and clearly visible everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Skip link — visually hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-2);
+  background: var(--color-ink);
+  color: var(--color-bg);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  z-index: 999;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* Reusable icon sizing */
+.icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.icon--sm {
+  width: 16px;
+  height: 16px;
+}

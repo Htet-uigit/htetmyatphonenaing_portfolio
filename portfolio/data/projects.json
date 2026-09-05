@@ -1,0 +1,81 @@
+[
+  {
+    "id": "credit-score-app",
+    "title": "Credit Score Prediction Application",
+    "summary": "A Streamlit-based web app for exploring credit score risk with an interactive, explainable prediction workflow tailored for finance and lending decision-making.",
+    "category": "ml",
+    "field": "Machine Learning",
+    "industry": "Finance",
+    "tags": ["Python", "Streamlit", "scikit-learn", "XGBoost"],
+    "image": "assets/images/credit%20score.jpg",
+    "github": "https://github.com/Htet-uigit/credit_score",
+    "demo": "https://htetmyatcreditscore.streamlit.app/",
+    "caseStudy": ""
+  },
+  {
+    "id": "digital-wellbeing",
+    "title": "Digital Wellbeing & Persona Analyzer",
+    "summary": "A Streamlit-powered analytics app that evaluates social media usage patterns and identifies digital personas, helping users understand their habits and improve wellbeing through personalized insights.",
+    "category": "analytics",
+    "field": "Analytics",
+    "industry": "Social Media",
+    "tags": ["Python", "Streamlit", "Pandas", "Seaborn"],
+    "image": "assets/images/digital%20wellbeing.jpg",
+    "github": "https://github.com/Htet-uigit/social_media",
+    "demo": "https://socialmedia25.streamlit.app/",
+    "caseStudy": ""
+  },
+  {
+    "id": "ev-charging",
+    "title": "EV Charging Station Management System",
+    "summary": "A collaborative data-driven solution for monitoring EV charging operations, forecasting demand, and improving station management through predictive insights and interactive decision support.",
+    "category": "analytics",
+    "field": "Analytics",
+    "industry": "Energy & Mobility",
+    "tags": ["Python", "Streamlit", "Pandas", "Forecasting"],
+    "image": "assets/images/EV%20Charging%20Station%20Management.jpg",
+    "github": "https://github.com/Htet-uigit/EV-Charging-Machine-Learning",
+    "demo": "https://ev-charging-timeseries.streamlit.app/",
+    "caseStudy": ""
+  },
+  {
+    "id": "asl-translator",
+    "title": "American Sign Language Real Time Translator",
+    "summary": "A real-time computer vision application that recognizes and translates American Sign Language gestures into text, powered by deep learning to enable accessible communication and bridge the gap between deaf and hearing communities.",
+    "category": "ml",
+    "field": "Machine Learning",
+    "industry": "Accessibility",
+    "tags": ["Python", "TensorFlow", "MobileNetV2", "Huggingface"],
+    "image": "assets/images/ASL.jpg",
+    "github": "https://github.com/Htet-uigit/ASL-Sign-Language",
+    "demo": "https://huggingface.co/spaces/HtetMyat26/ASL_Reatime_Translator",
+    "caseStudy": ""
+  },
+  {
+    "id": "myanmar-conflict-spatial-modeling",
+    "title": "Myanmar Conflict and Econometric Modeling",
+    "summary": "A spatial data analysis project examining conflict patterns across Myanmar using spatial econometric methods, geographically weighted regression, and interactive visual reporting.",
+    "category": "analytics",
+    "field": "Spatial Data Analysis",
+    "industry": "Conflict Research",
+    "tags": ["R", "Spatial Econometrics", "GWR", "Data Visualization"],
+    "image": "assets/images/Myanmar%20Spatial%20Data.png",
+    "github": "https://github.com/Htet-uigit/final_project_spatial_econometrics",
+    "demo": "assets/Myanmar%20Conflict%20Spatial%20Modelling%20Data%20Analysis/finalized_groupproject.html",
+    "caseStudy": ""
+  },
+  {
+    "id": "nlp-sentiment",
+    "title": "Evaluating and Improving an NLP Model Using the IMDB Movie Reviews Dataset",
+    "summary": "A text mining project that evaluates and improves NLP sentiment classification on the IMDB Movie Reviews dataset through model comparison, preprocessing, and performance analysis.",
+    "category": "ml",
+    "field": "Text Mining",
+    "industry": "Natural Language Processing",
+    "tags": ["Python", "NLP", "Text Mining", "Sentiment Analysis"],
+    "image": "assets/images/Movie%20Reviews%20NLP.png",
+    "github": "https://github.com/Htet-uigit/Text-Mining-Class-Project-",
+    "demo": "",
+    "report": "assets/Projects/Text%20Mining/Final%20Project%20Report%20Paper_HtetMyatPhoneNaing.pdf",
+    "caseStudy": ""
+  }
+]

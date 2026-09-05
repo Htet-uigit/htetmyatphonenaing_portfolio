@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section {
+  padding-block: var(--section-pad-block);
+}
+
+.section__heading {
+  max-width: 640px;
+  margin-bottom: var(--space-6);
+}
+
+.section__heading h2 {
+  margin-top: var(--space-1);
+}
+
+/* Generic responsive grid helpers */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+hr.rule {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin-block: var(--space-6);
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding-inline: 1rem;
+  }
+
+  .section {
+    padding-block: calc(var(--section-pad-block) * 0.7);
+  }
+}

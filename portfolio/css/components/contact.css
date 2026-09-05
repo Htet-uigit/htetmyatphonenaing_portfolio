@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact__grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.contact__intro h2 {
+  margin-bottom: var(--space-3);
+}
+
+.contact__intro p {
+  max-width: 46ch;
+  margin-bottom: var(--space-5);
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contact__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-body-lg);
+  font-weight: 600;
+  color: var(--color-ink);
+  padding-block: var(--space-1);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+  width: fit-content;
+}
+
+.contact__links a:hover {
+  color: var(--color-accent);
+  border-bottom-color: currentColor;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  background: var(--color-mist);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field label {
+  font-size: var(--text-micro);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-slate);
+}
+
+.field input,
+.field textarea {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  font-size: var(--text-body);
+  color: var(--color-ink);
+  resize: vertical;
+  transition: border-color var(--transition-fast);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.field.has-error input,
+.field.has-error textarea {
+  border-color: #E0455A;
+}
+
+.field__error {
+  font-size: var(--text-micro);
+  color: #E0455A;
+  min-height: 1em;
+}
+
+.contact__form-status {
+  font-size: var(--text-small);
+  text-align: center;
+  min-height: 1.2em;
+}
+
+.contact__form-status.is-success {
+  color: var(--color-graph-green);
+}
+
+.contact__form-status.is-error {
+  color: #E0455A;
+}
+
+@media (min-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-7);
+  }
+}
+
+@media (max-width: 899px) {
+  .contact__grid > * {
+    min-width: 0;
+    width: auto;
+  }
+}

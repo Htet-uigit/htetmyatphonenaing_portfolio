@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Htet Myat Phone Naing — Associate Data Analyst, and Low-Level AI Engineer</title>
+  <meta name="description" content="Portfolio of Htet Myat Phone Naing, an Enthusiastic Data Analyst specializing in machine learning, statistical analysis, and data visualization.">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Htet Myat Phone Naing — Data Scientist & Analyst">
+  <meta property="og:description" content="Models and dashboards that turn noisy data into clear decisions. Explore projects in machine learning, analytics, and visualization.">
+  <meta property="og:image" content="assets/images/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Fonts: Space Grotesk (headings), DM Sans (body), and IBM Plex Mono (data labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css?v=mobile2">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/navbar.css?v=mobile1">
+  <link rel="stylesheet" href="css/components/hero.css?v=mobile1">
+  <link rel="stylesheet" href="css/components/about.css">
+  <link rel="stylesheet" href="css/components/skills.css">
+  <link rel="stylesheet" href="css/components/projects.css?v=mobile1">
+  <link rel="stylesheet" href="css/components/timeline.css?v=whiteband2">
+  <link rel="stylesheet" href="css/components/contact.css?v=mobile1">
+  <link rel="stylesheet" href="css/components/footer.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo" aria-label="Home">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-code"></use></svg>
+      </a>
+
+      <nav class="navbar__links" id="navLinks" aria-label="Primary">
+        <a href="#home" class="navbar__link">Home</a>
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#skills" class="navbar__link">Skills</a>
+        <a href="#work" class="navbar__link">Work</a>
+        <a href="#activities" class="navbar__link">Activities</a>
+        <a href="#experience" class="navbar__link">Experience</a>
+        <a href="#contact" class="navbar__link">Contact</a>
+      </nav>
+
+      <button class="navbar__theme" id="themeToggle" aria-label="Switch to light mode" type="button">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-moon"></use></svg>
+      </button>
+
+      <button class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-menu"></use></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="eyebrow"><b>Data Analytics, ML Pipelines, &amp; Dashboards</b></p>
+        <h1 class="hero__headline">Think. Analyze. Build.<br></h1>
+        <p class="hero__subhead">I'm <strong>Htet Myat Phone Naing</strong> — I build machine learning models, manage data pipelines, and build interactive dashboards that help teams act on evidence instead of guesswork.</p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary">View my work</a>
+          <a href="assets/resume.pdf" class="btn btn--secondary" download>
+            Download Resume
+            <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-download"></use></svg>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="about section reveal">
+      <div class="container about__grid">
+        <div class="about__portrait">
+          <img src="assets/images/portrait.jpg" alt="Portrait of Htet Myat Phone Naing" width="420" height="420" loading="lazy">
+        </div>
+
+        <div class="about__content">
+          <p class="eyebrow"><b>About Me</b></p>
+          <h2>Htet Myat Phone Naing</h2>
+          <p class="about__bio">
+            I'm a passionate data science student and a rising senior with a strong foundation in statistics and data science at <b>Parami University</b>. I specialize in building machine learning models and creating insightful data visualizations that drive business decisions. My experience spans across various industries, including finance, healthcare, and e-commerce.
+          </p>
+          
+
+          <div class="about__stats">
+            <div class="stat reveal-child" style="--delay:0.05s">
+              <span class="stat__number">3+</span>
+              <span class="stat__label">Years working with data</span>
+            </div>
+            <div class="stat reveal-child" style="--delay:0.15s">
+              <span class="stat__number">10+</span>
+              <span class="stat__label">Models &amp; dashboards shipped</span>
+            </div>
+            <div class="stat reveal-child" style="--delay:0.25s">
+              <span class="stat__number">10+</span>
+              <span class="stat__label">Industries explored</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="skills section reveal">
+      <div class="container">
+        <div class="section__heading">
+          <p class="eyebrow">Expertise</p>
+          <h2>Tools & Technologies</h2>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skills__category">
+            <h3 class="skills__category-title">LANGUAGES</h3>
+            <ul class="chip-list">
+              <li class="chip" data-tooltip="Competent" aria-label="Python, competent">Python</li>
+              <li class="chip" data-tooltip="Advanced Beginner" aria-label="SQL, advanced beginner">SQL</li>
+              <li class="chip" data-tooltip="Advanced Beginner" aria-label="Excel, advanced beginner">Excel</li>
+              <li class="chip" data-tooltip="Novice" aria-label="JavaScript, novice">JavaScript</li>
+              <li class="chip" data-tooltip="Novice" aria-label="HTML, novice">HTML</li>
+              <li class="chip" data-tooltip="Novice" aria-label="CSS, novice">CSS</li>
+              <li class="chip" data-tooltip="Novice" aria-label="R, novice">R</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3 class="skills__category-title">MODELING &amp; ANALYSIS</h3>
+            <ul class="chip-list">
+              <li class="chip" data-tooltip="Proficient" aria-label="scikit-learn, proficient">scikit-learn</li>
+              <li class="chip" data-tooltip="Proficient" aria-label="Pandas, proficient">Pandas</li>
+              <li class="chip" data-tooltip="Proficient" aria-label="NumPy, proficient">NumPy</li>
+              <li class="chip" data-tooltip="Proficient" aria-label="PyTorch, proficient">PyTorch</li>
+              <li class="chip" data-tooltip="Proficient" aria-label="TensorFlow, proficient">TensorFlow</li>
+              <li class="chip" data-tooltip="Novice" aria-label="Statsmodels, novice">Statsmodels</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3 class="skills__category-title">VISUALIZATION</h3>
+            <ul class="chip-list">
+              <li class="chip" data-tooltip="Proficient" aria-label="Matplotlib, proficient">Matplotlib</li>
+              <li class="chip" data-tooltip="Proficient" aria-label="Seaborn, proficient">Seaborn</li>
+              <li class="chip" data-tooltip="Proficient" aria-label="Plotly, proficient">Plotly</li>
+              <li class="chip" data-tooltip="Advanced Beginner" aria-label="Tableau, advanced beginner">Tableau</li>
+              <li class="chip" data-tooltip="Advanced Beginner" aria-label="Power BI, advanced beginner">Power BI</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3 class="skills__category-title">CLOUD &amp; DEPLOYMENT</h3>
+            <ul class="chip-list">
+              <li class="chip" data-tooltip="Proficient" aria-label="Streamlit, proficient">Streamlit</li>
+              <li class="chip" data-tooltip="Competent" aria-label="AWS, competent">AWS</li>
+              <li class="chip" data-tooltip="Competent" aria-label="GCP, competent">GCP</li>
+              <li class="chip" data-tooltip="Competent" aria-label="Docker, competent">Docker</li>
+              <li class="chip" data-tooltip="Competent" aria-label="Microsoft Azure, competent">Microsoft Azure</li>
+              <li class="chip" data-tooltip="Advanced Beginner" aria-label="Git, advanced beginner">Git</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="work" class="projects section reveal">
+      <div class="container">
+        <div class="section__heading">
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects__filters" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="ml" aria-pressed="false">Machine Learning &amp; Deep Learning</button>
+          <button class="filter-btn" data-filter="analytics" aria-pressed="false">Analytics</button>
+          <button class="filter-btn" data-filter="viz" aria-pressed="false">Visualization</button>
+        </div>
+
+        <div class="projects__grid" id="projectsGrid" aria-live="polite">
+          <p class="projects__status" id="projectsStatus">Loading projects…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACTIVITIES ============ -->
+    <section id="activities" class="projects section reveal">
+      <div class="container">
+        <div class="section__heading">
+          <p class="eyebrow">Activities</p>
+          <h2>Activities & Community Work</h2>
+        </div>
+
+        <div class="projects__grid activities__grid" aria-live="polite">
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <span class="project-card__thumb-icon">🎓</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Student Council Leadership</h3>
+              <p class="project-card__summary">Led campus initiatives, organized events, and coordinated student engagement programs with a focus on inclusion and impact.</p>
+              <ul class="project-card__tags">
+                <li>Leadership</li>
+                <li>Community</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <span class="project-card__thumb-icon">📝</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Constitution Drafting Committee</h3>
+              <p class="project-card__summary">Collaborated with student leaders to draft governance principles, write policy proposals, and prepare presentations for council review.</p>
+              <ul class="project-card__tags">
+                <li>Policy</li>
+                <li>Teamwork</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <span class="project-card__thumb-icon">🤝</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Relief Fundraising Campaign</h3>
+              <p class="project-card__summary">Organized fundraising and awareness drives for earthquake and flood relief, connecting donors with urgent community support efforts.</p>
+              <ul class="project-card__tags">
+                <li>Fundraising</li>
+                <li>Outreach</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <span class="project-card__thumb-icon">📚</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Reading Contest Organizer</h3>
+              <p class="project-card__summary">Managed logistics and volunteer teams for a university reading contest, improving participation and promoting literacy among peers.</p>
+              <ul class="project-card__tags">
+                <li>Events</li>
+                <li>Education</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="timeline section reveal">
+      <div class="container">
+        <div class="section__heading">
+          <p class="eyebrow">Experience</p>
+          <h2>Where I've contributed.</h2>
+        </div>
+
+        <div class="timeline__tabs" role="tablist" aria-label="Experience tabs">
+          <button type="button" class="timeline__tab is-active" data-target="experiencePanel" role="tab" aria-selected="true">Professional experience</button>
+        </div>
+
+        <div class="timeline__panels">
+          <div id="experiencePanel" class="timeline__panel is-active" role="tabpanel">
+            <ol class="timeline__list">
+              <li class="timeline__item">
+                <span class="timeline__date">Feb 2026 — May 2026</span>
+                <div class="timeline__body">
+                  <h3>IT and Data Intern <span class="timeline__company">· NUGPay App</span></h3>
+                  <ul>
+                    <li>Supported IT and data workflows in a fast-moving digital product environment.</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="timeline__item">
+                <span class="timeline__date">Feb 2025 — Present</span>
+                <div class="timeline__body">
+                  <h3>Program Operation Officer <span class="timeline__company">· Impact Across Borders (IAB)</span></h3>
+                  <ul>
+                    <li>Coordinate program operations for a social entrepreneurship program.</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="timeline__item">
+                <span class="timeline__date">Aug 2025 — Dec 2025</span>
+                <div class="timeline__body">
+                  <h3>K-12 Tech Lead <span class="timeline__company">· BEAM Education Foundation</span></h3>
+                  <ul>
+                    <li>Led technology support and digital learning coordination for the K-12 program.</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="timeline__item">
+                <span class="timeline__date">Aug 2024 — Nov 2024</span>
+                <div class="timeline__body">
+                  <h3>Program Assistant <span class="timeline__company">· BEAM Education Foundation (K-12 Program)</span></h3>
+                  <ul>
+                    <li>Supported coordination and delivery for the K-12 education program.</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="timeline__item">
+                <span class="timeline__date">Jul 2024 — Present</span>
+                <div class="timeline__body">
+                  <h3>Program Assistant <span class="timeline__company">· Indigo Canvas (Animation)</span></h3>
+                  <ul>
+                    <li>Supported program activities and coordination for animation-based initiatives.</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="timeline__item">
+                <span class="timeline__date">May 2023 — Jan 2024</span>
+                <div class="timeline__body">
+                  <h3>Data Entry / Data Operations Assistant (Volunteer) <span class="timeline__company">· BEAM Education Foundation</span></h3>
+                  <ul>
+                    <li>Organized and coordinated the Chiang Mai University Lifelong Learning platform.</li>
+                  </ul>
+                </div>
+              </li>
+
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ORGANIZATIONS ============ -->
+    <section class="organizations" aria-labelledby="organizationsTitle">
+      <div class="container">
+        <div class="organizations__heading">
+          <p id="organizationsTitle">Brands and Organizations I've Worked With</p>
+        </div>
+
+        <div class="organizations__marquee" data-organizations-marquee>
+          <div class="organizations__track">
+            <div class="organizations__set">
+              <div class="organization-logo">
+                <a class="organization-logo__link" href="https://beamedu.org/about/" target="_blank" rel="noopener noreferrer" aria-label="Visit BEAM Education Foundation">
+                  <img src="assets/images/BEAM.png" alt="BEAM Education Foundation logo">
+                </a>
+              </div>
+              <div class="organization-logo organization-logo--iab">
+                <a class="organization-logo__link" href="https://www.linkedin.com/company/impact-across-border/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="Visit Impact Across Border on LinkedIn">
+                  <img src="assets/images/IAB.png" alt="Impact Across Border logo">
+                </a>
+              </div>
+              <div class="organization-logo organization-logo--indigo">
+                <a class="organization-logo__link" href="https://www.facebook.com/share/1cbFd2NTMa/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Visit Indigo Canvas on Facebook">
+                  <img src="assets/images/Indigo_Canvas.jpg" alt="Indigo Canvas logo">
+                </a>
+              </div>
+              <div class="organization-logo">
+                <a class="organization-logo__link" href="https://nugpay.app/" target="_blank" rel="noopener noreferrer" aria-label="Visit NUGPay">
+                  <img src="assets/images/NUGPay.png" alt="NUGPay logo">
+                </a>
+              </div>
+            </div>
+            <div class="organizations__set" aria-hidden="true">
+              <div class="organization-logo">
+                <a class="organization-logo__link" href="https://beamedu.org/about/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                  <img src="assets/images/BEAM.png" alt="">
+                </a>
+              </div>
+              <div class="organization-logo organization-logo--iab">
+                <a class="organization-logo__link" href="https://www.linkedin.com/company/impact-across-border/posts/?feedView=all" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                  <img src="assets/images/IAB.png" alt="">
+                </a>
+              </div>
+              <div class="organization-logo organization-logo--indigo">
+                <a class="organization-logo__link" href="https://www.facebook.com/share/1cbFd2NTMa/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                  <img src="assets/images/Indigo_Canvas.jpg" alt="">
+                </a>
+              </div>
+              <div class="organization-logo">
+                <a class="organization-logo__link" href="https://nugpay.app/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                  <img src="assets/images/NUGPay.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact section reveal">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build something with data.</h2>
+          <p>Open to data science &amp; analytics roles, freelance projects, and interesting collaborations. The fastest way to reach me is email.</p>
+
+          <ul class="contact__links">
+            <li>
+              <a href="mailto:htetmyatphonenaing2004@gmail.com">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-mail"></use></svg>
+                Email
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/htet-myat-phone-naing-6152082a4/" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-network"></use></svg>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Htet-uigit?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-code"></use></svg>
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://kaggle.com/htetmyatphonenaing" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chart"></use></svg>
+                Kaggle
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <span class="field__error" id="nameError" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="field__error" id="emailError" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="field__error" id="messageError" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Send message</button>
+          <p class="contact__form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© <span id="year">2026</span> Htet Myat Phone Naing. All rights reserved.</p>
+
+      <ul class="footer__socials">
+        <li><a href="mailto:htetmyatphonenaing2004@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-mail"></use></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/htet-myat-phone-naing-6152082a4/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-network"></use></svg></a></li>
+        <li><a href="https://github.com/Htet-uigit" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-code"></use></svg></a></li>
+        <li><a href="https://kaggle.com/htetmyatphonenaing" target="_blank" rel="noopener noreferrer" aria-label="Kaggle"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chart"></use></svg></a></li>
+      </ul>
+
+      <a href="#home" class="footer__back-top">
+        Back to top
+        <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-up"></use></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
