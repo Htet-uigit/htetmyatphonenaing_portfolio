@@ -1,6 +1,6 @@
 export function initContactForm() {
   // Initialize EmailJS with your Public Key
-  emailjs.init("yjs3DX9NtuGWTkVLn");
+  emailjs.init("yjs3DX9NtuGWTkVLn"); // Replace with your EmailJS Public Key
 
   const form = document.getElementById('contactForm');
   const statusEl = document.getElementById('formStatus');
@@ -21,7 +21,7 @@ export function initContactForm() {
     }
 
     // Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with your EmailJS IDs
-    emailjs.sendForm('service_jdc14ya', 'template_fmrrglf', form)
+    emailjs.sendForm('service_8bm413m', 'template_fmrrglf', form)
       .then(() => {
         if (statusEl) {
           statusEl.style.color = '#4caf50'; // Success green
