@@ -1,6 +1,13 @@
 // main.js — entry point. Imports each feature module and wires it up.
 // Loaded as <script type="module">, so this runs after the DOM has parsed.
 
+import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics/+esm';
+
+// Only run analytics if not on localhost
+if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+  inject();
+}
+
 import { initNavbar } from './navbar.js';
 import { initScrollProgress } from './scrollProgress.js';
 import { initScrollReveal } from './scrollReveal.js';
