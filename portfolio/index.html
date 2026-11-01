@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/portfolio/">
   <title>Htet Myat Phone Naing — Data Science & Artificial Intelligence</title>
   <meta name="description" content="Portfolio of Htet Myat Phone Naing, specializing in machine learning, data science, and AI pipelines.">
 
@@ -119,6 +120,7 @@
         const model = document.getElementById('mascotModel');
         if (model) {
           model.addEventListener('load', () => {
+            console.log('3D model loaded successfully');
             const animations = model.getAnimations();
             console.log('Available 3D animations:', animations.map(a => a.name));
             // Try common smile/wave animation names
@@ -126,6 +128,14 @@
             const waveAnim = animations.find(a => /wave|hand/i.test(a.name));
             if (smileAnim) smileAnim.play();
             if (waveAnim && !smileAnim) waveAnim.play();
+          });
+          model.addEventListener('error', (e) => {
+            console.error('3D model failed to load:', e);
+            model.style.display = 'none';
+            const fallback = document.createElement('div');
+            fallback.style.cssText = 'position:relative;z-index:2;display:flex;align-items:center;justify-content:center;height:85vh;font-family:system-ui;color:#94a3b8;';
+            fallback.textContent = '3D model failed to load. Check console for details.';
+            model.parentNode.insertBefore(fallback, model.nextSibling);
           });
         }
       </script>
