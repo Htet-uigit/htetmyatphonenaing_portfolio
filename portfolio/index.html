@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base href="/portfolio/">
   <title>Htet Myat Phone Naing — Data Science & Artificial Intelligence</title>
   <meta name="description" content="Portfolio of Htet Myat Phone Naing, specializing in machine learning, data science, and AI pipelines.">
 
@@ -96,9 +95,14 @@
             interaction-prompt="none"
             class="hero__mascot-model"
             style="width: 90vw; height: 85vh; max-width: none; max-height: none;"
-            animation-name="Wave"
-            repeat
-          ></model-viewer>
+          >
+            <div slot="poster" style="background:#0f172a;color:#94a3b8;display:flex;align-items:center;justify-content:center;font-family:system-ui;font-size:1.2rem;">
+              Loading 3D model...
+            </div>
+            <div slot="error" style="background:#fee2e2;color:#dc2626;display:flex;align-items:center;justify-content:center;font-family:system-ui;font-size:1rem;padding:1rem;">
+              3D model failed to load. Check console (F12).
+            </div>
+          </model-viewer>
         </div>
       </div>
 
