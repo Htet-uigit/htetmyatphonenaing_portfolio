@@ -1,46 +1,59 @@
 export function initContactForm() {
-  // Initialize EmailJS with your Public Key
-  emailjs.init("yjs3DX9NtuGWTkVLn"); // Replace with your EmailJS Public Key
-
   const form = document.getElementById('contactForm');
   const statusEl = document.getElementById('formStatus');
   if (!form) return;
 
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
 
-    const submitBtn = form.querySelector('button[type="submit"]');
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+      }
+
+      if (statusEl) {
+        statusEl.textContent = '';
+        statusEl.style.color = '';
+      }
+
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get('name') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      message: String(formData.get('message') || '').trim(),
+    };
+
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      if (statusEl) {
+        statusEl.style.color = '#f44336';
+        statusEl.textContent = result.error || 'Failed to send message. Please try again.';
+      }
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
+      }
+      return;
     }
 
     if (statusEl) {
-      statusEl.style.color = '';
-      statusEl.textContent = '';
+      statusEl.style.color = '#4caf50';
+      statusEl.textContent = 'Message sent successfully!';
     }
 
-    // Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with your EmailJS IDs
-    emailjs.sendForm('service_8bm413m', 'template_fmrrglf', form)
-      .then(() => {
-        if (statusEl) {
-          statusEl.style.color = '#4caf50'; // Success green
-          statusEl.textContent = 'Message sent successfully!';
-        }
-        form.reset();
-      })
-      .catch((error) => {
-        console.error('EmailJS Error:', error);
-        if (statusEl) {
-          statusEl.style.color = '#f44336'; // Error red
-          statusEl.textContent = 'Failed to send message. Please try again.';
-        }
-      })
-      .finally(() => {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Send message';
-        }
-      });
+    form.reset();
+
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+    }
   });
 }
