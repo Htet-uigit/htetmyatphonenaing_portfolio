@@ -41,6 +41,7 @@
   justify-content: center;
   pointer-events: none;
   opacity: 0.12;
+  overflow: hidden;
 }
 
 .hero__title-line1 {
@@ -54,6 +55,7 @@
   mix-blend-mode: multiply;
   text-align: center;
   white-space: nowrap;
+  animation: slideRightLeft 12s linear infinite;
 }
 
 .hero__title-line2 {
@@ -214,4 +216,9 @@
     inset: 0 0 auto 0;
     height: 100%;
   }
+}
+
+@keyframes slideRightLeft {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100vw); }
 }
