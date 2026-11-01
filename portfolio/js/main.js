@@ -12,6 +12,7 @@ import { initNavbar } from './navbar.js';
 import { initScrollProgress } from './scrollProgress.js';
 import { initScrollReveal } from './scrollReveal.js';
 import { initHeroNetwork } from './heroNetwork.js';
+import { initHeroMascot } from './heroNetwork.js';
 import { renderProjects } from './projectsRender.js';
 import { initProjectFilter } from './projectFilter.js';
 import { initContactForm } from './contactForm.js';
@@ -21,6 +22,7 @@ async function init() {
   initScrollProgress();
   initScrollReveal();
   initHeroNetwork('heroCanvas');
+  initHeroMascot();
   initContactForm();
 
   // Filtering needs cards to exist first, so it waits on the render.
@@ -47,7 +49,6 @@ async function init() {
       if (target) target.classList.add('is-active');
     });
   });
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
 
 init();

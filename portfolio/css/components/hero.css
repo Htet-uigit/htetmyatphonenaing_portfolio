@@ -97,7 +97,7 @@
   filter: drop-shadow(0 24px 48px rgba(0,0,0,0.12));
 }
 
-.hero__mascot-img {
+.hero__mascot-model {
   width: 100%;
   height: auto;
   display: block;
@@ -105,33 +105,14 @@
   transition: transform 0.3s ease;
 }
 
-.hero__mascot-interactive:hover .hero__mascot-img {
+.hero__mascot-interactive:hover .hero__mascot-model {
   transform: scale(1.02);
 }
 
-.hero__mascot-arm {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45%;
-  height: auto;
-  pointer-events: none;
-}
-
+/* Remove old 2D arm styles — arm is part of the glb model now */
+.hero__mascot-arm,
 .hero__arm-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.is-waving {
-  animation: wave 2.5s ease-in-out infinite;
-}
-
-@keyframes wave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-15deg); }
-  75% { transform: rotate(10deg); }
+  display: none;
 }
 
 /* Visible foreground content */
