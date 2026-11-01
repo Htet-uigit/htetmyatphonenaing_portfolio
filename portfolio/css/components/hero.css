@@ -31,11 +31,117 @@
   background: radial-gradient(60% 50% at 30% 45%, rgba(34,49,74,0.9) 0%, rgba(25,34,57,0.68) 55%, rgba(25,34,57,0) 100%);
 }
 
+/* Backdrop typography layer — sits behind the 3D mascot */
+.hero__text-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+.hero__title-line1 {
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 25vw, 24rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  margin: 0;
+  line-height: 0.85;
+  mix-blend-mode: multiply;
+}
+
+.hero__title-line2 {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 3vw, 1.75rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--color-ink);
+  margin: 0;
+  opacity: 0.6;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+[data-theme="dark"] .hero__title-line1,
+[data-theme="dark"] .hero__title-line2 {
+  color: #ffffff;
+  mix-blend-mode: screen;
+}
+
+/* Mascot — centered on top of the backdrop text */
+.hero__mascot-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.hero__mascot-interactive {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  max-width: clamp(220px, 45vw, 520px);
+  width: 100%;
+  height: auto;
+  pointer-events: auto;
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.12));
+}
+
+.hero__mascot-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.hero__mascot-interactive:hover .hero__mascot-img {
+  transform: scale(1.02);
+}
+
+.hero__mascot-arm {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: auto;
+  pointer-events: none;
+}
+
+.hero__arm-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.is-waving {
+  animation: wave 2.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(10deg); }
+}
+
+/* Visible foreground content */
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   max-width: 780px;
   padding-block: var(--space-8) var(--space-6);
+  text-align: center;
+  margin: 0 auto;
 }
 
 .hero__headline {
@@ -51,7 +157,7 @@
   font-size: var(--text-body-lg);
   color: var(--color-slate);
   max-width: 46ch;
-  margin-bottom: var(--space-4);
+  margin: 0 auto var(--space-4) auto;
 }
 
 .hero__subhead strong {
@@ -62,11 +168,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  justify-content: center;
 }
 
 .hero__scroll-cue {
   position: absolute;
-  left: var(--container-pad);
+  left: 50%;
   bottom: var(--space-4);
   z-index: 1;
   display: flex;
@@ -77,6 +184,7 @@
   font-size: var(--text-micro);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
+  transform: translateX(-50%);
 }
 
 .hero__scroll-cue-line {

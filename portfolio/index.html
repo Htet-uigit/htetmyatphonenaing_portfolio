@@ -3,23 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Htet Myat Phone Naing — Associate Data Analyst, and Low-Level AI Engineer</title>
-  <meta name="description" content="Portfolio of Htet Myat Phone Naing, an Enthusiastic Data Analyst specializing in machine learning, statistical analysis, and data visualization.">
+  <title>Htet Myat Phone Naing — Data Science & Artificial Intelligence</title>
+  <meta name="description" content="Portfolio of Htet Myat Phone Naing, specializing in machine learning, data science, and AI pipelines.">
 
-
-  <!-- Open Graph / social preview -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Htet Myat Phone Naing — Data Scientist & Analyst">
-  <meta property="og:description" content="Models and dashboards that turn noisy data into clear decisions. Explore projects in machine learning, analytics, and visualization.">
+  <meta property="og:title" content="Htet Myat Phone Naing — Data Science & AI">
+  <meta property="og:description" content="Models, dashboards, and AI systems built on statistics and machine learning.">
   <meta property="og:image" content="assets/images/og-cover.png">
-  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <!-- Fonts: Space Grotesk (headings), DM Sans (body), and IBM Plex Mono (data labels) -->
+  <!-- Fonts: Bebas Neue for Hero Display, DM Sans for body, Space Grotesk & IBM Plex Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
@@ -28,16 +26,14 @@
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/components/buttons.css">
   <link rel="stylesheet" href="css/components/navbar.css?v=mobile4">
-  <link rel="stylesheet" href="css/components/hero.css?v=mobile1">
+  <link rel="stylesheet" href="css/components/hero.css?v=3dmascotwave">
   <link rel="stylesheet" href="css/components/about.css">
   <link rel="stylesheet" href="css/components/skills.css">
   <link rel="stylesheet" href="css/components/projects.css?v=mobile1">
   <link rel="stylesheet" href="css/components/timeline.css?v=whiteband2">
   <link rel="stylesheet" href="css/components/contact.css?v=mobile1">
   <link rel="stylesheet" href="css/components/footer.css">
-
-  <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script></head>
+</head>
 <body>
 
   <a class="skip-link" href="#main">Skip to content</a>
@@ -71,24 +67,49 @@
 
   <main id="main">
 
-    <!-- ============ HERO ============ -->
-    <section id="home" class="hero">
-      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
-      <div class="hero__scrim" aria-hidden="true"></div>
+    <!-- ============ MINIMALIST 3D MASCOT HERO ============ -->
+    <section id="home" class="hero hero--mascot">
+      <canvas id="heroCanvas" class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__bg-grid" aria-hidden="true"></div>
 
-      <div class="container hero__content">
-        <p class="eyebrow"><b>Data Analytics, ML Pipelines, &amp; Dashboards</b></p>
-        <h1 class="hero__headline">Think. Analyze. Build.<br></h1>
-        <p class="hero__subhead">I'm <strong>Htet Myat Phone Naing</strong> — I build machine learning models, manage data pipelines, and build interactive dashboards that help teams act on evidence instead of guesswork.</p>
+      <!-- Giant Bebas Neue Backdrop Typography Layer (behind mascot) -->
+      <div class="hero__text-layer" aria-hidden="true">
+        <h1 class="hero__title-line1">HTET MYAT PHONE NAING</h1>
+        <p class="hero__title-line2">DATA SCIENCE AND ARTIFICIAL INTELLIGENCE</p>
+      </div>
+
+      <!-- Mascot Wrapper centered on top of backdrop text -->
+      <div class="hero__mascot-wrapper" id="mascotContainer">
+        <div class="hero__mascot-interactive" id="mascotInteractive">
+          <img 
+            src="assets/images/mascot.png" 
+            alt="3D Otter Mascot sitting with Laptop and Backpack" 
+            class="hero__mascot-img"
+            loading="eager"
+          >
+          <div class="hero__mascot-arm" id="mascotArm" aria-hidden="true">
+            <img src="assets/images/mascot_arm.png" alt="" class="hero__arm-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Visible headline content -->
+      <div class="hero__content">
+        <h1 class="hero__headline">Htet Myat Phone Naing</h1>
+        <p class="hero__subhead">Data Science &amp; Artificial Intelligence</p>
         <div class="hero__actions">
-          <a href="#work" class="btn btn--primary">View my work</a>
+          <a href="#work" class="btn btn--primary">View Projects</a>
           <a href="assets/resume.pdf" class="btn btn--secondary" download>
-            Download Resume
+            Download Resume 
             <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-download"></use></svg>
           </a>
         </div>
       </div>
 
+      <!-- Scroll Indicator -->
+      <a href="#about" class="hero__scroll-indicator" aria-label="Scroll to About section">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-down"></use></svg>
+      </a>
     </section>
 
     <!-- ============ ABOUT ============ -->
@@ -104,7 +125,6 @@
           <p class="about__bio">
             I'm a passionate data science student and a rising senior with a strong foundation in statistics and data science at <b>Parami University</b>. I specialize in building machine learning models and creating insightful data visualizations that drive business decisions. My experience spans across various industries, including finance, healthcare, and e-commerce.
           </p>
-          
 
           <div class="about__stats">
             <div class="stat reveal-child" style="--delay:0.05s">
@@ -129,7 +149,7 @@
       <div class="container">
         <div class="section__heading">
           <p class="eyebrow">Expertise</p>
-          <h2>Tools & Technologies</h2>
+          <h2>Tools &amp; Technologies</h2>
         </div>
 
         <div class="skills__grid">
@@ -204,7 +224,6 @@
       </div>
     </section>
 
-
     <!-- ============ EXPERIENCE ============ -->
     <section id="experience" class="timeline section reveal">
       <div class="container">
@@ -230,7 +249,6 @@
                   </ul>
                 </div>
               </li>
-
 
               <li class="timeline__item">
                 <span class="timeline__date">Feb 2026 — May 2026</span>
@@ -317,7 +335,7 @@
                 <a class="organization-logo__link" href="https://www.cpintl.org" target="_blank" rel="noopener noreferrer" aria-label="Visit Community Partners International">
                   <img src="assets/images/CPI.png" alt="Community Partners International logo">
                 </a>
-             </div>
+              </div>
               <div class="organization-logo organization-logo--indigo">
                 <a class="organization-logo__link" href="https://www.facebook.com/share/1cbFd2NTMa/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Visit Indigo Canvas on Facebook">
                   <img src="assets/images/Indigo_Canvas.jpg" alt="Indigo Canvas logo">
@@ -340,12 +358,10 @@
                   <img src="assets/images/IAB.png" alt="">
                 </a>
               </div>
-
               <div class="organization-logo">
                 <a class="organization-logo__link" href="https://goldenlandsolidarity.com/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
                   <img src="assets/images/Golden Land.png" alt="">
                 </a>
-
               </div>
               <div class="organization-logo">
                 <a class="organization-logo__link" href="https://www.cpintl.org" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
