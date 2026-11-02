@@ -16,6 +16,12 @@
   border-radius: var(--radius-lg);
   background: var(--color-mist);
   margin-inline: auto;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.about__portrait img:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-md);
 }
 
 .about__content h2 {
