@@ -59,7 +59,7 @@
   mix-blend-mode: multiply;
   text-align: center;
   white-space: nowrap;
-  animation: slideRightLeft 12s linear infinite;
+  animation: slideRightLeft 40s linear infinite;
 }
 
 .hero__title-line2 {
