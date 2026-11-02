@@ -31,17 +31,21 @@
   background: radial-gradient(60% 50% at 30% 45%, rgba(34,49,74,0.9) 0%, rgba(25,34,57,0.68) 55%, rgba(25,34,57,0) 100%);
 }
 
-/* Backdrop typography layer — single sentence behind the 3D mascot */
+/* Backdrop typography layer — sliding sentence behind the 3D mascot */
 .hero__text-layer {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   z-index: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   pointer-events: none;
   opacity: 0.12;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .hero__title-line1 {
@@ -240,8 +244,8 @@
 }
 
 @keyframes slideRightLeft {
-  0% { transform: translateX(100vw); }
-  100% { transform: translateX(-100vw); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200%); }
 }
 
 @keyframes spin {
