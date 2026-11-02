@@ -12,6 +12,8 @@
   <!-- Model Viewer for 3D glb model -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.css" />
+  <!-- Chart.js for skill distribution doughnut chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <meta property="og:title" content="Htet Myat Phone Naing — Data Science & AI">
   <meta property="og:description" content="Models, dashboards, and AI systems built on statistics and machine learning.">
   <meta property="og:image" content="assets/images/og-cover.png">
@@ -229,6 +231,8 @@
             </ul>
           </div>
         </div>
+
+        <canvas id="skillChart" width="300" height="300"></canvas>
       </div>
     </section>
 
@@ -496,5 +500,42 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js" defer></script>
   <script type="module" src="js/main.js"></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const ctx = document.getElementById('skillChart');
+      if (!ctx || typeof Chart === 'undefined') return;
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Languages', 'Modeling & Analysis', 'Visualization', 'Cloud & Deployment'],
+          datasets: [{
+            data: [7, 6, 5, 6],
+            backgroundColor: ['#2451FF', '#4CAF50', '#FF9800', '#9C27B0'],
+            borderColor: '#fff',
+            borderWidth: 2,
+          }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { font: { family: 'IBM Plex Mono', size: 10 }, padding: 12 } },
+            title: {
+              display: true,
+              text: 'Skill Categories',
+              font: { family: 'Bebas Neue', size: 16, weight: '400' },
+              padding: { top: 8, bottom: 20 },
+              color: '#1F2937',
+            },
+            tooltip: {
+              callbacks: {
+                label: ctx => ctx.label + ': ' + ctx.parsed + ' tools',
+              },
+            },
+          },
+        },
+      });
+    });
+  </script>
 </body>
 </html>
