@@ -181,10 +181,17 @@
 @media (max-width: 767px) {
   .hero {
     min-height: 88vh;
+    overflow: visible;
+  }
+
+  .hero__mascot-model {
+    width: 240px;
+    height: auto;
   }
 
   .hero__content {
-    padding-block: var(--space-7) var(--space-5);
+    padding-block: var(--space-6) var(--space-5);
+    margin-top: var(--space-6);
   }
 
   .hero__scroll-cue {
