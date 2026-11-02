@@ -185,13 +185,27 @@
   }
 
   .hero__mascot-model {
-    width: 240px;
+    width: 200px;
     height: auto;
   }
 
   .hero__content {
     padding-block: var(--space-6) var(--space-5);
-    margin-top: var(--space-6);
+    margin-top: var(--space-4);
+  }
+
+  .hero__headline {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+    margin-bottom: var(--space-2);
+  }
+
+  .hero__subhead {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .hero__actions {
+    gap: var(--space-1);
   }
 
   .hero__scroll-cue {
@@ -202,17 +216,8 @@
     max-width: 100%;
   }
 
-  .hero__headline {
-    font-size: clamp(2.35rem, 11vw, 3.5rem);
-    overflow-wrap: anywhere;
-  }
-
-  .hero__subhead {
-    font-size: 1rem;
-  }
-
   .hero__actions .btn {
-    width: 100%;
+    width: auto;
     justify-content: center;
   }
 }
