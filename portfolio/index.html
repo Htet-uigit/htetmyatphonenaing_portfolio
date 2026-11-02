@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Htet Myat Phone Naing — Data Science & Artificial Intelligence</title>
+  <title>Htet Myat Phone Naing â€” Data Science & Artificial Intelligence</title>
   <meta name="description" content="Portfolio of Htet Myat Phone Naing, specializing in machine learning, data science, and AI pipelines.">
 
   <!-- Open Graph -->
@@ -12,7 +12,7 @@
   <!-- Model Viewer for 3D glb model -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.css" />
-  <meta property="og:title" content="Htet Myat Phone Naing — Data Science & AI">
+  <meta property="og:title" content="Htet Myat Phone Naing â€” Data Science & AI">
   <meta property="og:description" content="Models, dashboards, and AI systems built on statistics and machine learning.">
   <meta property="og:image" content="assets/images/og-cover.png">
 
@@ -76,19 +76,40 @@
       <canvas id="heroCanvas" class="hero__canvas" aria-hidden="true"></canvas>
       <div class="hero__bg-grid" aria-hidden="true"></div>
 
-      <!-- Giant Bebas Neue Backdrop Typography Layer (behind mascot) -->
-      <div class="hero__text-layer" aria-hidden="true">
-        <h1 class="hero__title-line1">HTET MYAT PHONE NAING HTET MYAT PHONE NAING HTET MYAT PHONE NAING</h1>
-      </div>
-
       <!-- Mascot Wrapper centered on top of backdrop text -->
       <div class="hero__mascot-wrapper" id="mascotContainer">
+        <!-- Stage = the frame: backdrop text is clipped to this box only -->
+        <div class="hero__mascot-stage">
+        <!-- Giant backdrop typography layer (behind mascot, clipped to the stage) -->
+        <div class="hero__text-layer" aria-hidden="true">
+          <div class="hero__marquee-track">
+            <div class="hero__marquee-group">
+              <span class="hero__title-line1">HTET MYAT PHONE NAING</span>
+              <span class="hero__title-line1">HTET MYAT PHONE NAING</span>
+              <span class="hero__title-line1">HTET MYAT PHONE NAING</span>
+            </div>
+            <!-- Identical copy: lets the track loop seamlessly at -50% -->
+            <div class="hero__marquee-group">
+              <span class="hero__title-line1">HTET MYAT PHONE NAING</span>
+              <span class="hero__title-line1">HTET MYAT PHONE NAING</span>
+              <span class="hero__title-line1">HTET MYAT PHONE NAING</span>
+            </div>
+          </div>
+        </div>
+
         <div class="hero__mascot-interactive" id="mascotInteractive">
             <model-viewer
             id="mascotModel"
             src="assets/images/otter-laptop.glb"
             alt="3D Otter Mascot with Laptop"
             auto-rotate
+            camera-controls
+            disable-zoom
+            disable-pan
+            touch-action="pan-y"
+            camera-orbit="0deg 75deg auto"
+            min-camera-orbit="-Infinity 0deg auto"
+            max-camera-orbit="Infinity 180deg auto"
             shadow-intensity="1"
             exposure="1.2"
             interaction-prompt="none"
@@ -96,6 +117,7 @@
             style="width: 420px; height: 420px; max-width: none; max-height: none;"
           ></model-viewer>
         </div>
+        </div><!-- /.hero__mascot-stage -->
       </div>
 
       <!-- Visible headline content under mascot -->
@@ -247,7 +269,7 @@
         </div>
 
         <div class="projects__grid" id="projectsGrid" aria-live="polite">
-          <p class="projects__status" id="projectsStatus">Loading projects…</p>
+          <p class="projects__status" id="projectsStatus">Loading projectsâ€¦</p>
         </div>
       </div>
     </section>
@@ -269,9 +291,9 @@
             <ol class="timeline__list">
 
               <li class="timeline__item">
-                <span class="timeline__date">Jul 2024 — Present</span>
+                <span class="timeline__date">Jul 2024 â€” Present</span>
                 <div class="timeline__body">
-                  <h3>Program Assistant <span class="timeline__company">· Indigo Canvas (Animation)</span></h3>
+                  <h3>Program Assistant <span class="timeline__company">Â· Indigo Canvas (Animation)</span></h3>
                   <ul>
                     <li>Supported program activities and coordination for animation-based initiatives.</li>
                   </ul>
@@ -279,9 +301,9 @@
               </li>
 
               <li class="timeline__item">
-                <span class="timeline__date">Feb 2026 — May 2026</span>
+                <span class="timeline__date">Feb 2026 â€” May 2026</span>
                 <div class="timeline__body">
-                  <h3>IT and Data Intern <span class="timeline__company">· NUGPay App</span></h3>
+                  <h3>IT and Data Intern <span class="timeline__company">Â· NUGPay App</span></h3>
                   <ul>
                     <li>Supported IT and data workflows in a fast-moving digital product environment.</li>
                   </ul>
@@ -289,9 +311,9 @@
               </li>
 
               <li class="timeline__item">
-                <span class="timeline__date">Aug 2025 — Dec 2025</span>
+                <span class="timeline__date">Aug 2025 â€” Dec 2025</span>
                 <div class="timeline__body">
-                  <h3>K-12 Tech Lead <span class="timeline__company">· BEAM Education Foundation</span></h3>
+                  <h3>K-12 Tech Lead <span class="timeline__company">Â· BEAM Education Foundation</span></h3>
                   <ul>
                     <li>Led technology support and digital learning coordination for the K-12 program.</li>
                   </ul>
@@ -299,9 +321,9 @@
               </li>
 
               <li class="timeline__item">
-                <span class="timeline__date">Feb 2025 — June 2025</span>
+                <span class="timeline__date">Feb 2025 â€” June 2025</span>
                 <div class="timeline__body">
-                  <h3>Program Operation Officer <span class="timeline__company">· Impact Across Borders (IAB)</span></h3>
+                  <h3>Program Operation Officer <span class="timeline__company">Â· Impact Across Borders (IAB)</span></h3>
                   <ul>
                     <li>Coordinate program operations for a social entrepreneurship program.</li>
                   </ul>
@@ -309,9 +331,9 @@
               </li>
 
               <li class="timeline__item">
-                <span class="timeline__date">Aug 2024 — Nov 2024</span>
+                <span class="timeline__date">Aug 2024 â€” Nov 2024</span>
                 <div class="timeline__body">
-                  <h3>Program Assistant <span class="timeline__company">· BEAM Education Foundation (K-12 Program)</span></h3>
+                  <h3>Program Assistant <span class="timeline__company">Â· BEAM Education Foundation (K-12 Program)</span></h3>
                   <ul>
                     <li>Supported coordination and delivery for the K-12 education program.</li>
                   </ul>
@@ -319,9 +341,9 @@
               </li>
 
               <li class="timeline__item">
-                <span class="timeline__date">May 2023 — Jan 2024</span>
+                <span class="timeline__date">May 2023 â€” Jan 2024</span>
                 <div class="timeline__body">
-                  <h3>Data Entry / Data Operations Assistant (Volunteer) <span class="timeline__company">· BEAM Education Foundation</span></h3>
+                  <h3>Data Entry / Data Operations Assistant (Volunteer) <span class="timeline__company">Â· BEAM Education Foundation</span></h3>
                   <ul>
                     <li>Organized and coordinated the Chiang Mai University Lifelong Learning platform.</li>
                   </ul>
@@ -478,7 +500,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">© <span id="year">2026</span> Htet Myat Phone Naing. All rights reserved.</p>
+      <p class="footer__copy">Â© <span id="year">2026</span> Htet Myat Phone Naing. All rights reserved.</p>
 
       <ul class="footer__socials">
         <li><a href="mailto:htetmyatphonenaing2004@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-mail"></use></svg></a></li>

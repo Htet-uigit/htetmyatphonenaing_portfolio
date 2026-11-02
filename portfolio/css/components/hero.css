@@ -31,16 +31,28 @@
   background: radial-gradient(60% 50% at 30% 45%, rgba(34,49,74,0.9) 0%, rgba(25,34,57,0.68) 55%, rgba(25,34,57,0) 100%);
 }
 
+/* Stage — the frame around the mascot. The sliding text lives inside it and
+   is clipped by it, so it never runs behind the headline or buttons. */
+.hero__mascot-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 420px; /* matches the model-viewer height */
+  overflow: hidden;
+}
+
 /* Backdrop typography layer — sliding sentence behind the 3D mascot */
 .hero__text-layer {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   bottom: 0;
   z-index: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   pointer-events: none;
   opacity: 0.12;
   overflow: hidden;
@@ -48,18 +60,34 @@
   height: 100%;
 }
 
+/* Endless marquee: two identical groups side by side, track slides -50%
+   (exactly one group) and restarts invisibly. Direction: right -> left. */
+.hero__marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  flex-shrink: 0;
+  will-change: transform;
+  animation: slideRightLeft 40s linear infinite;
+}
+
+.hero__marquee-group {
+  display: flex;
+  flex-shrink: 0;
+}
+
 .hero__title-line1 {
+  flex-shrink: 0;
   font-family: var(--font-display);
   font-size: clamp(4rem, 12vw, 10rem);
   font-weight: 800;
   letter-spacing: -0.01em;
   color: var(--color-ink);
   margin: 0;
+  padding-right: 0.5em; /* gap between repeats (padding keeps -50% exact) */
   line-height: 1.1;
   mix-blend-mode: multiply;
-  text-align: center;
   white-space: nowrap;
-  animation: slideRightLeft 40s linear infinite;
 }
 
 .hero__title-line2 {
@@ -105,6 +133,17 @@
 
 .hero__mascot-interactive:hover .hero__mascot-model {
   transform: scale(1);
+}
+
+/* Drag-to-rotate (globe style); zoom/pan are disabled on the element */
+.hero__mascot-model {
+  cursor: grab;
+  outline: none;
+  --poster-color: transparent;
+}
+
+.hero__mascot-model:active {
+  cursor: grabbing;
 }
 
 /* Remove old 2D arm styles — arm is part of the glb model now */
@@ -193,7 +232,7 @@
 
   .hero__mascot-wrapper {
     height: auto;
-    width: auto;
+    width: 100%;
   }
 
   .hero__mascot-model {
@@ -236,6 +275,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero__marquee-track {
+    animation: none;
+  }
+
   .hero__scroll-cue-line::after {
     animation: none;
     inset: 0 0 auto 0;
@@ -245,7 +288,7 @@
 
 @keyframes slideRightLeft {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-200%); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes spin {
