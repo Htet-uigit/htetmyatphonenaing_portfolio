@@ -182,6 +182,14 @@
   .hero {
     min-height: 88vh;
     overflow: visible;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero__mascot-wrapper {
+    height: auto;
+    width: auto;
   }
 
   .hero__mascot-model {
@@ -192,6 +200,7 @@
   .hero__content {
     padding-block: var(--space-6) var(--space-5);
     margin-top: var(--space-4);
+    text-align: center;
   }
 
   .hero__headline {
